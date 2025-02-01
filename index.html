@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link href="./styles.css" rel="stylesheet"> -->
-    <link href="./output.css" rel="stylesheet">
-    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+    <link href="./styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
     </style>
@@ -15,34 +14,66 @@
 
 <body>
     <!-- Navbar  -->
-    <div class="flex justify-between mt-6 max-w-6xl mx-auto">
+    <div class="flex justify-between mt-2 md:mt-6 w-[90%] md:max-w-6xl mx-auto">
         <div class="flex items-center gap-10">
             <a href="./index.html" class="flex gap-2 items-center">
                 <img src="./assets/logo.png" alt="" class="w-4" />
                 <p class="font-bold text-xl">StartupLanding</p>
             </a>
-            <a href="./index.html">Home</a>
-            <p>Advertise</p>
-            <p>Supports</p>
-            <p>About</p>
-            <a href="./contact.html">Contact</a>
+            <a href="./index.html" class="hidden md:block">Home</a>
+            <p class="hidden md:block">Advertise</p>
+            <p class="hidden md:block">Supports</p>
+            <p class="hidden md:block">About</p>
+            <a href="./contact.html" class="hidden md:block">Contact</a>
         </div>
-        <div class="flex gap-10 items-center">
+        <div class="hidden md:flex gap-10 items-center">
             <p>Login</p>
             <div class="text-[#DB4A87]">
                 Get started
                 <img src="./assets/underline.png" />
             </div>
         </div>
+
+        <div class="mt-2">
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 md:hidden cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+
+            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 md:hidden cursor-pointer hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+
+    </div>
+
+    <!-- mobile view  -->
+    <div class="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 focus:outline-hidden hidden hamburger-menu"
+        role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+        <a href="./index.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+            id="user-menu-item-0">Home</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+            id="user-menu-item-1">Advertise</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+            id="user-menu-item-1">Supports</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+            id="user-menu-item-1">About</a>
+        <a href="./contact.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+            id="user-menu-item-1">Contact</a>
+        <a href="./contact.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+            id="user-menu-item-1">Login</a>
+        <a href="./contact.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+            id="user-menu-item-1">Get Started</a>
     </div>
 
     <!-- Hero section  -->
-    <div class="flex justify-between mt-20 max-w-6xl mx-auto">
-        <div class="flex flex-col gap-8 justify-center w-[45%]">
+    <div class="flex flex-col md:flex-row justify-between mt-20 max-w-full  lg:max-w-6xl mx-auto">
+        <div class="flex flex-col gap-8 justify-center w-full md:w-[45%] px-5 md:px-0">
             <div class="text-5xl leading-14 crimson-text-semibold text-[#02073E]">
                 Build your audience <br /> & grow your business <br />online smarter
             </div>
-            <div class="text-md leading-7 w-[90%]">
+            <div class="text-md leading-7 w-full md:w-[90%]">
                 Get your blood tests delivered at let home collect sample from the
                 victory of the managments that supplies best design system guidelines
                 ever.
@@ -53,20 +84,22 @@
                     Subscribe
                 </button>
             </div>
-            <div class="flex gap-x-7">
+            <div class="flex flex-col md:flex-row gap-x-7">
                 <p class="text-gray-500">Sponsored by:</p>
-                <img src="./assets/paypal.png" />
-                <img src="./assets/google.png" />
-                <img src="./assets/dropbox.png" />
+                <div class="flex items-center gap-5 my-5 md:my-0">
+                    <img src="./assets/paypal.png" class="w-[100px]" />
+                    <img src="./assets/google.png" class="w-[100px]" />
+                    <img src="./assets/dropbox.png" class="w-[100px]" />
+                </div>
             </div>
         </div>
-        <div class="w-[50%]">
+        <div class="w-full md:w-[50%]">
             <img src="./assets/Hero.png" />
         </div>
     </div>
 
     <!-- Cards section  -->
-    <div class="mt-48 w-5xl mx-auto">
+    <div class="mt-20 md:mt-48 w-full md:w-5xl mx-auto">
         <p class="text-center text-4xl crimson-text-semibold font-normal">
             Successful business start with great feature
         </p>
@@ -74,7 +107,7 @@
             Build an incredible workplace and grow your business with Gusto’s <br />
             all-in-one platform with amazing contents.
         </p>
-        <div class="flex mt-16 gap-x-18">
+        <div class="flex flex-col md:flex-row mt-16 gap-x-18 gap-y-10 w-[90%] md:w-full mx-auto">
             <div class="flex gap-5">
                 <img src="./assets/individual.png" class="w-[60px] h-[60px]" />
                 <div>
@@ -109,11 +142,11 @@
     </div>
 
     <!-- features section  -->
-    <div class="flex w-5xl mx-auto mt-48 gap-5 justify-between">
-        <div class="w-[50%] mt-10">
+    <div class="flex flex-col md:flex-row w-full md:w-5xl mx-auto mt-20 md:mt-48 gap-5 justify-between">
+        <div class="w-full md:w-[50%] mt-10">
             <img src="./assets/features.png" />
         </div>
-        <div class="w-[50%]">
+        <div class="w-[80%] md:w-[50%] mx-auto">
             <div class="crimson-text-semibold text-[40px] leading-12">
                 <p>
                     Meet our exciting features that make you wow <span>😲</span>
@@ -163,11 +196,11 @@
     </div>
 
     <!-- features 2 section  -->
-    <div class="mt-48 w-5xl mx-auto flex justify-between gap-10">
-        <div class="w-[43%] flex flex-col gap-6">
+    <div class="mt-20 md:mt-48 w-[90%] md:w-5xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+        <div class="w-full md:w-[43%] flex flex-col gap-6">
             <p class="crimson-text-semibold text-4xl leading-12">
                 Don’t work hard, be smart & work smartly. Take a relax sit 😇
-                </>
+                </d>
             <p>
                 Get your tests delivered at let home collect sample from the victory of the managments that supplies
                 best design system guidelines ever.
@@ -258,14 +291,14 @@
                 </span>
             </div>
         </div>
-        <div class="w-[50%]">
+        <div class="w-full md:w-[50%]">
             <img src="./assets/feature2.png" />
         </div>
     </div>
 
     <!-- ultimate features section  -->
-    <div class="bg-gray-100 mt-48 py-14">
-        <div class="w-5xl mx-auto ">
+    <div class="bg-gray-100 mt-20 md:mt-48 py-14">
+        <div class="w-[95%] md:w-5xl mx-auto ">
             <p class="text-center text-4xl crimson-text-semibold font-normal">
                 Ultimate features you must appreciate
             </p>
@@ -274,11 +307,11 @@
                 meeting end you can export in one click into your preferred.
             </p>
 
-            <div class="grid grid-cols-3 gap-10 mt-12 max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 max-w-4xl mx-auto">
                 <div class="flex flex-col items-center gap-4">
                     <img src="./assets/email.png" class="w-14" />
                     <p class="font-semibold">Ultimate Email subscription</p>
-                    <p>
+                    <p class="text-center">
                         Get your info tests delivered at home collect a sample from the your task.
                     </p>
                     <div class="text-blue-500 flex items-center gap-2 mt-2">
@@ -296,7 +329,7 @@
                 <div class="flex flex-col items-center gap-4">
                     <img src="./assets/bolt.png" class="w-14" />
                     <p class="font-semibold">Bolt Performance</p>
-                    <p>
+                    <p class="text-center">
                         Get your info tests delivered at home collect a sample from the your task.
                     </p>
                     <div class="text-blue-500 flex items-center gap-2 mt-2">
@@ -314,7 +347,7 @@
                 <div class="flex flex-col items-center gap-4">
                     <img src="./assets/transaction.png" class="w-14" />
                     <p class="font-semibold">Secure Transaction</p>
-                    <p>
+                    <p class="text-center">
                         Get your info tests delivered at home collect a sample from the your task.
                     </p>
                     <div class="text-blue-500 flex items-center gap-2 mt-2">
@@ -332,7 +365,7 @@
                 <div class="flex flex-col items-center gap-4">
                     <img src="./assets/options.png" class="w-14" />
                     <p class="font-semibold">Multiple Options</p>
-                    <p>
+                    <p class="text-center">
                         Get your info tests delivered at home collect a sample from the your task.
                     </p>
                     <div class="text-blue-500 flex items-center gap-2 mt-2">
@@ -350,7 +383,7 @@
                 <div class="flex flex-col items-center gap-4">
                     <img src="./assets/star.png" class="w-14" />
                     <p class="font-semibold">5 Star Rating service</p>
-                    <p>
+                    <p class="text-center">
                         Get your info tests delivered at home collect a sample from the your task.
                     </p>
                     <div class="text-blue-500 flex items-center gap-2 mt-2">
@@ -368,7 +401,7 @@
                 <div class="flex flex-col items-center gap-4">
                     <img src="./assets/email.png" class="w-14" />
                     <p class="font-semibold">Integrated with Shopify</p>
-                    <p>
+                    <p class="text-center">
                         Get your info tests delivered at home collect a sample from the your task.
                     </p>
                     <div class="text-blue-500 flex items-center gap-2 mt-2">
@@ -388,11 +421,11 @@
     </div>
 
     <!-- customer section  -->
-    <div class="mt-48 w-6xl mx-auto flex justify-between gap-5">
-        <div class="w-[70%]">
+    <div class="mt-20 md:mt-48 w-[90%] md:w-6xl mx-auto flex flex-col md:flex-row justify-between gap-5">
+        <div class="w-full md:w-[70%]">
             <img src="./assets/customer-animate.png" />
         </div>
-        <div class="w-[43%] flex flex-col gap-6">
+        <div class="w-full md:w-[43%] flex flex-col gap-6">
             <p class="crimson-text-semibold text-4xl leading-12">
                 We have more than thousand of worldwide happy customer 😊
             </p>
@@ -415,7 +448,7 @@
     </div>
 
     <!-- Blog section  -->
-    <div class="my-24 w-6xl mx-auto">
+    <div class="my-24 w-[90%] md:w-6xl mx-auto">
         <p class="text-center text-4xl crimson-text-semibold font-normal">
             Popular blog post we update everyday
         </p>
@@ -423,7 +456,7 @@
             Focus only on the meaning, we take care of the design. As soon as the <br />
             meeting end you can export in one click.
         </p>
-        <div class="flex justify-between gap-10 mt-10">
+        <div class="flex flex-col md:flex-row justify-between gap-10 mt-10">
             <div class="flex flex-col gap-3">
                 <img src="./assets/blog1.png" class="rounded-md" />
                 <p class="w-[85%] font-semibold">
@@ -470,23 +503,24 @@
     </div>
 
     <!-- CTA section  -->
-    <div class="bg-[url('/assets/cta.png')] bg-cover bg-center h-64 w-full ">
+    <div class="bg-none md:bg-[url('/assets/cta.png')] bg-cover bg-center h-64 w-full">
         <div class="max-w-5xl mx-auto flex items-center justify-between h-full">
-            <div class="my-10 bg-white w-full flex justify-between p-10 rounded-xl">
-                <div class="w-[50%]">
+            <div
+                class="my-10 bg-white w-full flex flex-col md:flex-row justify-between p-3 md:p-10 rounded-xl gap-y-10">
+                <div class="w-[95%] md:w-[50%]">
                     <p class="crimson-text-bold text-4xl">Like our service? Subscribe us</p>
                     <p class="leading-7 mt-2">
                         We have more than thousand of creative entrepreneurs and stat joining our business
                     </p>
                 </div>
                 <div>
-                    <div class="flex gap-2 items-center h-full">
+                    <div class="flex gap-2 items-center h-full w-full">
                         <input type="text" placeholder="Enter Email address" class="bg-gray-100 px-6 py-3 rounded-md" />
                         <button class="bg-[#DB4A87] text-white px-6 py-3 rounded-md">
                             Subscribe
                         </button>
                     </div>
-                    <div class="flex items-center gap-2 text-sm text-gray-400 -mt-4">
+                    <div class="flex items-center gap-2 text-sm text-gray-400 mt-5 md:-mt-4">
                         <input type="checkbox" class="accent-gray-200 ml-2" />
                         <div>
                             Don’t provide any promotional message.
@@ -498,9 +532,9 @@
     </div>
 
     <!-- Footer section  -->
-    <div class="max-w-4xl mx-auto my-20 flex justify-between">
+    <div class="w-[90%] md:max-w-5xl mx-auto my-20 grid grid-cols-2 md:grid-cols-5 gap-14 p-5">
 
-        <div class="flex flex-col gap-5 mt-4">
+        <div class="flex flex-col gap-5 mt-0 md:mt-3 col-span-2 md:col-span-1">
             <div class="flex gap-3 items-center">
                 <img src="./assets/logo.png" alt="" class="w-5" />
                 <p class="font-bold text-xl">StartupLanding</p>
@@ -522,6 +556,7 @@
                 <div>Copyright</div>
             </div>
         </div>
+
         <div>
             <p class="text-lg font-semibold mb-6">Our Information</p>
             <div class="flex flex-col gap-4 text-gray-600">
@@ -531,6 +566,7 @@
                 <div>Site Map</div>
             </div>
         </div>
+
         <div>
             <p class="text-lg font-semibold mb-6">My Account</p>
             <div class="flex flex-col gap-4 text-gray-600">
@@ -540,6 +576,7 @@
                 <div>Images & B-roll</div>
             </div>
         </div>
+
         <div>
             <p class="text-lg font-semibold mb-6">Connect</p>
             <div class="flex flex-col gap-4 text-gray-600">
@@ -582,8 +619,7 @@
                     <span>Github</span>
                 </div>
                 <div class="flex gap-3 items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
-                        viewBox="0 0 48 48">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
                         <circle cx="24" cy="24" r="19.375" fill="#ed3675"></circle>
                         <path fill="#bd1949" fill-rule="evenodd"
                             d="M24,4C12.959,4,4,12.959,4,24c0,11.041,8.959,20,20,20	c11.02,0,20-8.959,20-20C44,12.959,35.02,4,24,4z M37.21,13.219c2.386,2.907,3.818,6.616,3.861,10.629	c-0.564-0.108-6.204-1.258-11.887-0.542c-0.13-0.282-0.239-0.586-0.369-0.889c-0.347-0.824-0.738-1.67-1.128-2.473	C33.978,17.384,36.842,13.696,37.21,13.219z M24,6.95c4.338,0,8.308,1.627,11.323,4.295c-0.304,0.434-2.885,3.883-8.959,6.16	c-2.798-5.141-5.9-9.349-6.377-10C21.267,7.102,22.612,6.95,24,6.95z M16.733,8.555c0.455,0.607,3.492,4.837,6.334,9.87	c-7.983,2.126-15.033,2.083-15.792,2.083C8.382,15.215,11.961,10.811,16.733,8.555z M6.907,24.022c0-0.174,0-0.347,0-0.521	c0.738,0.022,9.024,0.13,17.549-2.43c0.499,0.954,0.954,1.931,1.388,2.907c-0.217,0.065-0.456,0.13-0.672,0.195	c-8.807,2.842-13.492,10.607-13.883,11.258C8.577,32.417,6.907,28.403,6.907,24.022z M24,41.093c-3.948,0-7.592-1.345-10.477-3.601	c0.304-0.629,3.774-7.31,13.406-10.672c0.043-0.022,0.065-0.022,0.109-0.043c2.408,6.226,3.384,11.453,3.644,12.95	C28.62,40.616,26.364,41.093,24,41.093z M33.523,38.165c-0.174-1.041-1.085-6.03-3.319-12.169	c5.358-0.846,10.043,0.542,10.629,0.738C40.096,31.484,37.362,35.583,33.523,38.165z"
@@ -594,6 +630,24 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+        menuIcon.addEventListener('click', () => {
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            hamburgerMenu.classList.toggle('active');
+        });
+
+        closeIcon.addEventListener('click', () => {
+            closeIcon.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            hamburgerMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
