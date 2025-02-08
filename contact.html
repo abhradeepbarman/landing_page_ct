@@ -113,51 +113,51 @@
                 <p>We're here to assist you.</p>
             </div>
 
-            <form class="bg-white py-14 px-10 lg:px-20 rounded-xl">
+            <form class="bg-white py-14 px-10 lg:px-20 rounded-xl" id="contact-form">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 mb-8">
                     <div>
                         <label class="text-gray-500">Full name</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="name-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">Email address</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="email-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">Phone number</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="phone-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">Date of birth</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="dob-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">Gender</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="gender-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">City</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="city-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">State</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="state-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">Country</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="country-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">Address</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="address-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
                     <div>
                         <label class="text-gray-500">Message</label> <br />
-                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="message-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
                     </div>
 
                     <div>
-                        <span class="text-gray-500">Request a counselling session</span>
+                        <label class="text-gray-500">Request a counselling session</label>
                         <div class="flex gap-7 mt-2">
                             <div class="flex items-center gap-1 justify-center">
                                 <input type="radio" class="accent-[#DB4A87]" name="counselling" />
@@ -188,11 +188,11 @@
                 </div>
 
                 <div class="flex gap-2 items-center mb-5">
-                    <input type="checkbox" class="w-5 h-5 accent-[#DB4A87]" />
+                    <input type="checkbox" class="w-5 h-5 accent-[#DB4A87] terms-field" />
                     <label class="text-gray-500">Agree terms and conditions</label>
                 </div>
 
-                <button class="bg-[#DB4A87] text-white px-6 py-4 w-[100%] lg:w-[50%] mt-4 mx-auto">Submit
+                <button class="bg-[#DB4A87] text-white px-6 py-4 w-[100%] lg:w-[50%] mt-4 mx-auto cursor-pointer">Submit
                     Information</button>
             </form>
         </div>
@@ -431,23 +431,7 @@
         </div>
     </div>
 
-    <script>
-        const menuIcon = document.getElementById('menuIcon');
-        const closeIcon = document.getElementById('closeIcon');
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-
-        menuIcon.addEventListener('click', () => {
-            menuIcon.classList.add('hidden');
-            closeIcon.classList.remove('hidden');
-            hamburgerMenu.classList.toggle('active');
-        });
-
-        closeIcon.addEventListener('click', () => {
-            closeIcon.classList.add('hidden');
-            menuIcon.classList.remove('hidden');
-            hamburgerMenu.classList.toggle('active');
-        });
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
