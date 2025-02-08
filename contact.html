@@ -21,9 +21,9 @@
                 <p class="font-bold text-xl">StartupLanding</p>
             </a>
             <a href="./index.html" class="hidden lg:block">Home</a>
-            <p class="hidden lg:block">Advertise</p>
-            <p class="hidden lg:block">Supports</p>
-            <p class="hidden lg:block">About</p>
+            <a href="#" class="hidden lg:block">Advertise</p>
+            <a href="#" class="hidden lg:block">Supports</p>
+            <a href="#" class="hidden lg:block">About</p>
             <a href="./contact.html" class="hidden lg:block">Contact</a>
         </div>
         <div class="hidden lg:flex gap-10 items-center">
@@ -117,57 +117,85 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 mb-8">
                     <div>
                         <label class="text-gray-500">Full name</label> <br />
-                        <input type="text" class="name-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class=" w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="name-field" />
+                        <div class="error-message text-red-500" id="name-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">Email address</label> <br />
-                        <input type="text" class="email-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="email-field" />
+                        <div class="error-message text-red-500" id="email-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">Phone number</label> <br />
-                        <input type="text" class="phone-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class=" w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="phone-field" />
+                        <div class="error-message text-red-500" id="phone-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">Date of birth</label> <br />
-                        <input type="text" class="dob-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="date" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="dob-field" />
+                        <div class="error-message text-red-500" id="dob-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">Gender</label> <br />
-                        <input type="text" class="gender-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <!-- <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="gender-field" /> -->
+                        <select class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none text-gray-500"
+                            id="gender-field">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="error-message text-red-500" id="gender-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">City</label> <br />
-                        <input type="text" class="city-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="city-field" />
+                        <div class="error-message text-red-500" id="city-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">State</label> <br />
-                        <input type="text" class="state-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class="w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="state-field" />
+                        <div class="error-message text-red-500" id="state-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">Country</label> <br />
-                        <input type="text" class="country-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class=" w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="country-field" />
+                        <div class="error-message text-red-500" id="country-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">Address</label> <br />
-                        <input type="text" class="address-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class=" w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="address-field" />
+                        <div class="error-message text-red-500" id="address-error"></div>
                     </div>
                     <div>
                         <label class="text-gray-500">Message</label> <br />
-                        <input type="text" class="message-field w-full border-gray-300 border-b-2 border-t-0 focus:outline-none" />
+                        <input type="text" class=" w-full border-gray-300 border-b-2 border-t-0 focus:outline-none"
+                            id="message-field" />
+                        <div class="error-message text-red-500" id="message-error"></div>
                     </div>
 
                     <div>
-                        <label class="text-gray-500">Request a counselling session</label>
+                        <label class="text-gray-500" for="counselling-session">Request a counselling session</label>
                         <div class="flex gap-7 mt-2">
                             <div class="flex items-center gap-1 justify-center">
-                                <input type="radio" class="accent-[#DB4A87]" name="counselling" />
-                                <label class="text-gray-500">Yes</label>
+                                <input type="radio" class="accent-[#DB4A87]" value="yes" name="counselling-session" />
+                                <p class="text-gray-500">Yes</p>
                             </div>
                             <div class="flex items-center gap-1 justify-center">
-                                <input type="radio" class="accent-[#DB4A87]" name="counselling" />
-                                <label class="text-gray-500">No</label>
+                                <input type="radio" class="accent-[#DB4A87]" value="no" name="counselling-session" />
+                                <p class="text-gray-500">No</p>
                             </div>
                         </div>
+                        <div class="error-message text-red-500" id="counselling-session-error"></div>
                     </div>
 
                     <div>
@@ -186,10 +214,13 @@
                         </div>
                     </div>
                 </div>
+                <div>
+                    <div class="flex gap-2 items-center mb-5">
+                        <input type="checkbox" class="w-5 h-5 accent-[#DB4A87]" id="terms-field" />
+                        <label class="text-gray-500">Agree terms and conditions</label>
 
-                <div class="flex gap-2 items-center mb-5">
-                    <input type="checkbox" class="w-5 h-5 accent-[#DB4A87] terms-field" />
-                    <label class="text-gray-500">Agree terms and conditions</label>
+                    </div>
+                    <div class="error-message text-red-500 -mt-5" id="terms-error"></div>
                 </div>
 
                 <button class="bg-[#DB4A87] text-white px-6 py-4 w-[100%] lg:w-[50%] mt-4 mx-auto cursor-pointer">Submit
